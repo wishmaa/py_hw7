@@ -2,7 +2,7 @@ import glob
 import os
 import pytest
 
-tmp_directory_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..tmp'))
+tmp_directory_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'tmp'))
 
 @pytest.fixture(scope='function', autouse=False)
 def tmp_directory():
