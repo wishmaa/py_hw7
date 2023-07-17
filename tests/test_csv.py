@@ -9,11 +9,8 @@ def test_csv():
         csvwriter = csv.writer(csvfile, delimiter=',')
         csvwriter.writerow(['Anna', 'Pavel', 'Peter'])
         csvwriter.writerow(['Alex', 'Serj', 'Yana'])
-
-
-def test_csv_2():
-    with open(csv_path) as opencsv:
-        csvreader = csv.reader(opencsv)
-    for row in csvreader:
-        assert len(row) == 3
+    with open(csv_path) as csvfile:
+        csvreader = csv.reader(csvfile)
+        for row in csvreader:
+            assert len(row) == 3
     os.remove(csv_path)
